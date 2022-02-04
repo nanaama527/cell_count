@@ -9,10 +9,11 @@ class Simulation
         @selected_cell = nil
         user_prompt
         find_cell(@user_input)
-        @grid.search_cells(@selected_cell)
+        @grid.search_neighbors(@selected_cell)
     end
 
     def user_prompt
+        puts 'Hi, Want to check yor active cells?'
         puts 'Select your starting cell from the following options:'
         puts 'A1, A2, A3'
         puts 'B1, B2, B3'

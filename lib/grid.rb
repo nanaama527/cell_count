@@ -14,9 +14,9 @@ class Grid
         @cells[1] = []
         @cells[2] = []
         numbers.each do |number|
-            @cells[0] << Cell.new('I' + number)
-            @cells[1] << Cell.new('L' + number)
-            @cells[2] << Cell.new('Y' + number)
+            @cells[0] << Cell.new('A' + number)
+            @cells[1] << Cell.new('B' + number)
+            @cells[2] << Cell.new('C' + number)
         end 
     end
 
@@ -74,6 +74,6 @@ class Grid
         if max_x != true && max_y != true
             counter += 1 if @cells[index[0] + 1][index[1] + 1].active == true  
         end
-        put "There are #{counter} active cells"
+        p "There are #{counter} active cells"
     end
 end
